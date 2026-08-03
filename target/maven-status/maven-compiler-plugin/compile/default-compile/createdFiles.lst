@@ -1,0 +1,11 @@
+com\relicbearers\relic\RelicProfile.class
+com\relicbearers\listeners\JoinLeaveListener.class
+com\relicbearers\listeners\PvpListener.class
+com\relicbearers\relic\RelicType.class
+com\relicbearers\listeners\EnergyListener.class
+com\relicbearers\listeners\AbilityListener.class
+com\relicbearers\relic\RelicManager.class
+com\relicbearers\RelicBearersPlugin.class
+com\relicbearers\storage\PlayerDataStore.class
+com\relicbearers\relic\abilities\RelicAbility.class
+com\relicbearers\commands\RelicCommand.class
