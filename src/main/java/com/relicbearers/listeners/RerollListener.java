@@ -64,8 +64,10 @@ public class RerollListener implements Listener {
         placeholder.setItemMeta(meta);
 
         ShapelessRecipe recipe = new ShapelessRecipe(recipeKey, placeholder);
-        recipe.addIngredient(1, new RecipeChoice.ExactChoice(relicTemplates));
-        recipe.addIngredient(catalystAmount, new RecipeChoice.MaterialChoice(catalystMaterial));
+recipe.addIngredient(new RecipeChoice.ExactChoice(relicTemplates));
+for (int i = 0; i < catalystAmount; i++) {
+    recipe.addIngredient(catalystMaterial);
+}
 
         plugin.getServer().removeRecipe(recipeKey); // safe if this is a /reload
         plugin.getServer().addRecipe(recipe);
