@@ -1,0 +1,49 @@
+# RelicBearers configuration
+
+# PvP is on by default now. The only way to gain a relic you don't already
+# own is to kill another player who has one you want.
+global-pvp-enabled: true
+
+# --- Charge (spendable resource for activating abilities) ---
+charge:
+  max: 100
+  # passive regen, in charge points, every regen-interval-seconds
+  passive-regen-amount: 1
+  passive-regen-interval-seconds: 4
+  # bonus charge granted by relevant PvE actions
+  pve-action-bonus: 8
+  ability-cost: 40
+
+# --- Mastery XP -> Tier thresholds (lifetime, per relic type, never spent) ---
+mastery:
+  tier-2-threshold: 300
+  tier-3-threshold: 1000
+  max-tier: 3
+  # XP granted per PvE action type
+  xp-mining-ore: 2
+  xp-mob-kill: 4
+  xp-harvest-crop: 2
+  xp-fishing: 3
+  xp-taming: 6
+  xp-advancement: 15
+
+# --- Ability cooldowns, in seconds, reduced slightly per tier ---
+cooldown:
+  base-seconds: 20
+  reduction-per-tier-seconds: 4
+
+# --- Kill-based relic transfer (this is now the "collect all relics" engine) ---
+# Killing another player grants you their relic (at Tier 1) if you don't
+# already own it. No shards, no duels, no cooldowns - just a straight kill.
+kill:
+  # victim's relic tier must be >= this for it to transfer on death.
+  # Keeps people from farming brand-new spawns for free relics. Set to 1 to
+  # disable this requirement entirely.
+  min-tier-for-relic-drop: 2
+
+# --- Reroll crafting recipe ---
+# Craft the relic item you're holding together with the catalyst below to
+# reroll it into a different random relic (your progress on the old one is lost).
+reroll:
+  catalyst-material: ENDER_EYE
+  catalyst-amount: 3
