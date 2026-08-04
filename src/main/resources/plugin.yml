@@ -1,0 +1,21 @@
+name: RelicBearers
+version: '1.0.0'
+main: com.relicbearers.RelicBearersPlugin
+api-version: '1.21'
+author: YourName
+description: PvE-first relic power system - kill other players to claim their relics, craft a reroll for your own.
+
+commands:
+  relic:
+    description: Main RelicBearers command
+    usage: /relic <info|list|switch|give>
+    permission: relicbearers.use
+    permission-message: You don't have permission to use this command.
+
+permissions:
+  relicbearers.use:
+    description: Access to /relic commands
+    default: true
+  relicbearers.admin:
+    description: Admin commands (give)
+    default: op
