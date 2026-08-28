@@ -1,0 +1,47 @@
+# ImposterPlugin configuration
+# All locations use the world set as "arena-world" below.
+
+arena-world: world
+
+# Where crewmates/imposter spawn when a game starts
+game-spawn:
+  x: 0.5
+  y: 100
+  z: 0.5
+  yaw: 0
+
+# The End platform / area where the task must be completed.
+# The plugin does not teleport players here automatically - it only checks
+# that the player is in an END-environment world when they perform the task.
+
+# Voting room - everyone gets teleported here during a meeting, items are stored
+# and returned afterward.
+voting-room:
+  x: 0.5
+  y: 200
+  z: 0.5
+  yaw: 0
+
+# Seconds players stand in the voting room before the vote UI opens (a
+# silent "discussion" pause since in-game chat is disabled).
+meeting-discussion-seconds: 15
+
+# Seconds players have to cast a vote once the UI opens.
+meeting-voting-seconds: 20
+
+# Number of emergency meeting bells given to each player at game start.
+bells-per-player: 1
+
+# Minimum players required to start a game.
+min-players: 3
+
+# Default number of secret Imposters if no count is given to /imposter start
+# or /startimposter. Can always be overridden per-game with a command argument.
+default-imposters: 1
+
+# Cooldown (seconds) on the Imposter's one-shot kill weapon between uses.
+weapon-cooldown-seconds: 60
+
+# How many seconds a player is locked out of calling an emergency meeting
+# after being hit by the Imposter - stops victims bell-escaping mid-attack.
+meeting-lockout-after-hit-seconds: 5
